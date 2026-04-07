@@ -83,7 +83,7 @@ console.log(another_person);
 const another_person2 = {...person}; //Spread operator is also used to clone an object
 console.log(another_person2); 
 
-let another_person3 = {education : 'MS'}; //Another way to clone an object
+let another_person3 = {education : 'Masters'}; //Another way to clone an object
 for(let key in person)
     another_person3[key] = person[key];
 console.log(another_person3);
