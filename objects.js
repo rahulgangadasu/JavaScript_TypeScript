@@ -108,3 +108,7 @@ console.log(another_message); //Template literals are enclosed by backticks (`)
 
 console.log(`message from ${myname} ${last_name}`); 
 //Template literals can also include expressions inside ${} which will be evaluated and included in the string
+
+const now = new Date();
+const date1 = new Date('April 8 2025');
+const date2 = new Date(2023, 8, 27, 10,39);
