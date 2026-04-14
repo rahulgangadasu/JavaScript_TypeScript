@@ -80,6 +80,6 @@ function playVideo(a, b){
     console.log(this); // 'this' refers to the global object (window in browsers)
 }
 
-playVideo().call({name: 'rahul'}, 1, 2 ); // Using call to set 'this' to a custom object 
-playVideo().apply({name: 'rahul'}, [1, 2]); // Using apply to set 'this' to a custom object and pass arguments as an array
-playVideo().bind({name: 'rahul'})(); // Using bind to create a new function with 'this' set to a custom object
+playVideo.call({name: 'rahul'}, 1, 2 ); // Using call to set 'this' to a custom object 
+playVideo.apply({name: 'rahul'}, [1, 2]); // Using apply to set 'this' to a custom object and pass arguments as an array
+playVideo.bind({name: 'rahul'})(); // Using bind to create a new function with 'this' set to a custom object
