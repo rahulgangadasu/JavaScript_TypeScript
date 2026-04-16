@@ -113,3 +113,32 @@ class Triangle extends Shape{ // define a Triangle class that inherits from Shap
     }
 }
 const triangle = new Triangle('red', 5); // create a new Triangle instance with a color and a side length
+
+//Stack
+
+const _items = new WeakMap(); // create a WeakMap to store the private member for items
+class Stack{
+    constructor(){
+        _items.set(this, []); // use the WeakMap to store the private member for items, initialized as an empty array
+    }
+
+    push(item){ //to add an item to the stack
+        _items.get(this).push(item); 
+    }
+
+    pop(){ // to remove and return the last item from the stack
+        const items = _items.get(this); 
+        if(items.length === 0) throw new Error('Stack is empty'); // check if the stack is empty before popping an item
+        return items.pop(); // remove and return the last item from the stack
+    }
+
+    peek(){ //to return the last item from the stack without removing it
+        const items = _items.get(this);
+        if(items.length === 0) throw new Error('Stack is empty'); // check if the stack is empty before peeking an item
+        return items[items.length - 1]; // return the last item from the stack without removing it
+    }
+
+    get count(){ // to return the number of items in the stack
+        return _items.get(this).length; // return the length of the items array, which represents the number of items in the stack
+    }
+}
