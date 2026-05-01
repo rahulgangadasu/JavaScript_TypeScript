@@ -2,3 +2,7 @@ es6_tooling/
 webpack-demo
 .idea/
 Docs/
+TypeScript/dist/*.d.ts
+TypeScript/dist/*.d.ts.map
+TypeScript/dist/*.js.map
+.vscode/
