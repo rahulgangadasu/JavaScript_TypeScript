@@ -47,4 +47,12 @@ class MyExtendedGenericClass extends MyGenericClass {
 let myExtendedGenericClass = new MyExtendedGenericClass(10);
 console.log(myExtendedGenericClass);
 console.log(myExtendedGenericClass.value);
+let key = "name";
+console.log(key);
+let product = {
+    name: "Laptop",
+    price: 999.99,
+    description: "A high-performance laptop",
+};
+console.log(product);
 //# sourceMappingURL=generics.js.map

@@ -64,3 +64,32 @@ class MyExtendedGenericClass<U> extends MyGenericClass<U> {
 let myExtendedGenericClass = new MyExtendedGenericClass<number>(10);
 console.log(myExtendedGenericClass);
 console.log(myExtendedGenericClass.value);
+
+//KeyOf operator
+type MyType = {
+  name: string;
+  age: number;
+  email: string;
+};
+
+type MyKeyType = keyof MyType; // "name" | "age" | "email"
+let key: MyKeyType = "name";
+console.log(key);
+
+//Type Mapping
+interface T {
+  name: string;
+  price: number;
+  description: string;
+}
+
+type ReadOnly<Type> = {
+  readonly [K in keyof Type]: Type[K]; //type mapping in one generic operation
+};
+
+let product: ReadOnly<T> = {
+  name: "Laptop",
+  price: 999.99,
+  description: "A high-performance laptop",
+};
+console.log(product);
